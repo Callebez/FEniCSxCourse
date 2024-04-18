@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE Xdmf SYSTEM "Xdmf.dtd" []>
+<Xdmf Version="3.0" xmlns:xi="https://www.w3.org/2001/XInclude">
+  <Domain>
+    <Grid Name="Velocity" GridType="Collection" CollectionType="Temporal">
+      <Grid Name="Velocity" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="9.0199999999998965" />
+        <Attribute Name="Velocity" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="2022 3" Format="HDF">vel.h5:/Function/Velocity/9_0199999999998965</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+  </Domain>
+</Xdmf>
